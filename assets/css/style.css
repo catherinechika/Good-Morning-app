@@ -7,5 +7,8 @@
 body{
     background-image: url(../images/sunshine-over-sea.jpg);
     text-align: center;
-    
+    width: 100%;
+}
+footer{
+    color: white;
 }
