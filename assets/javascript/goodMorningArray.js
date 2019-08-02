@@ -78,5 +78,13 @@ var greetings = [
   
   ];   
   
-  console.log(greetings[Math.floor(Math.random() * greetings.length)].greeting)
-  $("#para").append(greetings[Math.floor(Math.random() * greetings.length)].greeting)
+  
+  $("h1").append(greetings[Math.floor(Math.random() * greetings.length)].greeting)
+  
+  
+  var fontArray = ["'Single Day', cursive", "'Tangerine', cursive", "'Love Ya Like A Sister', cursive", "'Fredericka the Great', cursive","'Marcellus SC', serif","'Mountains of Christmas', cursive","'Rye', cursive","'Sacramento', cursive","'Monoton', cursive","'Playball', cursive","'Italianno', cursive","'Rancho', cursive","'Cinzel Decorative', cursive","'Emilys Candy', cursive","'Londrina Shadow', cursive","'Jacques Francois Shadow', cursive"],
+      selectFont = fontArray[Math.floor(Math.random() * fontArray.length)];
+  var fontColor = ["#F082B5", "#0DA9FF","#FF620D","black","#0B1380"];
+      selectColor = fontColor[Math.floor(Math.random() * fontColor.length)];
+  $("h1").css('font-family', selectFont)
+  $("h1").css('color', selectColor)
