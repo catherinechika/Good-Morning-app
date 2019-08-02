@@ -1,11 +1,13 @@
 /* Backgrounds */
 .jumbotron{
-    background-image: url(../images/sunshine-over-sea.jpg);
     color: rgb(253, 252, 252);
     font-style: italic;
+    width: 100vw;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 body{
-    background-image: url(../images/sunshine-over-sea.jpg);
     text-align: center;
     width: 100%;
 }
