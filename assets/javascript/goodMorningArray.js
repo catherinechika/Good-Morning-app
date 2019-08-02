@@ -80,7 +80,7 @@ var greetings = [
   
   
   $(".display-4").text(greetings[Math.floor(Math.random() * greetings.length)].greeting)
-  $(".lead").text("Today is _________")
+  
   
   var fontArray = ["'Single Day', cursive", "'Tangerine', cursive", "'Love Ya Like A Sister', cursive", "'Fredericka the Great', cursive","'Marcellus SC', serif","'Mountains of Christmas', cursive","'Rye', cursive","'Sacramento', cursive","'Monoton', cursive","'Playball', cursive","'Italianno', cursive","'Rancho', cursive","'Cinzel Decorative', cursive","'Emilys Candy', cursive","'Londrina Shadow', cursive","'Jacques Francois Shadow', cursive"],
       selectFont = fontArray[Math.floor(Math.random() * fontArray.length)];
@@ -89,6 +89,8 @@ var greetings = [
   $(".display-4, .lead").css('font-family', selectFont)
   $(".display-4, .lead").css('color', selectColor)
   $(".display-4, .lead").css('background', "white")
+  //$(".display-4").css('box-shadow', "inset 3px 3px 8px black")
+  //$(".lead").css('box-shadow', "inset 3px 3px 8px black")
   $(".display-4").css('text-shadow', "4px 4px 6px gray")
   $(".display-4").css('border-radius', "30px")
   $(".display-4").css('padding', "8px")
