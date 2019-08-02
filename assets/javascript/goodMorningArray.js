@@ -88,6 +88,7 @@ var greetings = [
       selectColor = fontColor[Math.floor(Math.random() * fontColor.length)];
   $(".display-4, .lead").css('font-family', selectFont)
   $(".display-4, .lead").css('color', selectColor)
+  $(".display-4, .lead").hide().fadeIn(3000)
   $(".display-4, .lead").css('background', "white")
   //$(".display-4").css('box-shadow', "inset 3px 3px 8px black")
   //$(".lead").css('box-shadow', "inset 3px 3px 8px black")
