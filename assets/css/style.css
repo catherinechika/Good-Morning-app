@@ -1,0 +1,14 @@
+/* Backgrounds */
+.jumbotron{
+    background-image: url(../images/sunshine-over-sea.jpg);
+    color: rgb(253, 252, 252);
+    font-style: italic;
+}
+body{
+    background-image: url(../images/sunshine-over-sea.jpg);
+    text-align: center;
+    width: 100%;
+}
+footer{
+    color: white;
+}
