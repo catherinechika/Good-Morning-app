@@ -1,9 +1,9 @@
 /* Backgrounds */
-.jumbotron{
+body{
     color: rgb(253, 252, 252);
     font-style: italic;
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: 100%;
 }
