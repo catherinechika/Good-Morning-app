@@ -2,108 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Good Morning app</title>
-    <!--FontAwesome-->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Good Morning app</title>
 
-    <!--CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <!--Google Fonts CSS-->
-    <link
-        href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Emilys+Candy|Fredericka+the+Great|Italianno|Jacques+Francois+Shadow|Londrina+Shadow|Love+Ya+Like+A+Sister|Marcellus+SC|Monoton|Mountains+of+Christmas|Playball|Rancho|Rye|Sacramento|Single+Day|Tangerine&display=swap"
-        rel="stylesheet">
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+  <!--CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <!--Google Fonts CSS-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Emilys+Candy|Fredericka+the+Great|Italianno|Jacques+Francois+Shadow|Londrina+Shadow|Love+Ya+Like+A+Sister|Marcellus+SC|Monoton|Mountains+of+Christmas|Playball|Rancho|Rye|Sacramento|Single+Day|Tangerine&display=swap"
+    rel="stylesheet">
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
-<div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4"></h1>
-          <p class="lead"></p>
-        </div>
-      </div>
+
 <body>
-  quoteAPI
-    <script src="./quoteAPI.js"></script>
-</body>
-    <div class="container"></div>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+      </div>
+    </div>
+  </nav>
+  </header>
   
-         <section class="section">
-        <div class="container">
-          <h1 class="title">
-            GOOD MORNING WELCOME TO THIS NEW DAY!!!
-          </h1>
-          <p class="subtitle">
-            ORANGE-TEAM-PROJECT-1 <strong>GA-Tech Bootcamp</strong>!
-          </p>
-        </div>
-      </section>
+<main>
+  
+  <div id="content" class="jumbotron jumbotron-fluid">
+    
+    <div class="container">
+      <h1 class="title">
+        GOOD MORNING WELCOME TO THIS NEW DAY!!!
+      </h1>
+      <p class="subtitle">
+        ORANGE-TEAM-PROJECT-1 <strong>GA-Tech Bootcamp</strong>!
+      </p>
+    </div>
+  </div>
+  
+</main>
+  
+<footer>
+  Copyright @ Orange-Team-Project-1 2019
+</footer>
 
   <script>
-        $(document).ready(function(){
+    $(document).ready(function () {
 
-$.ajax({
-    url: "http://api.ipstack.com/check?access_key=f822e5c9d81b944cb089e61702e644de" ,
-    method: "GET"
-}).then(function (ipData) {
+      $.ajax({
+        url: "http://api.ipstack.com/check?access_key=f822e5c9d81b944cb089e61702e644de",
+        method: "GET"
+      }).then(function (ipData) {
 
         console.log(String(ipData.latitude));
         console.log(String(ipData.longitude));
 
-        localStorage.setItem("latitude",String(ipData.latitude));
-        localStorage.setItem("longitude",String(ipData.longitude));
+        localStorage.setItem("latitude", String(ipData.latitude));
+        localStorage.setItem("longitude", String(ipData.longitude));
         let latitude = localStorage.getItem("latitude");
         let longitude = localStorage.getItem("longitude");
- master
 
         //API REQUEST FOR WEATHER DATA USING IP
         const APIKeyWeather = "42f33f5100f9cc8bb325c710a41147ec";
 
         const queryURLWeather = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude +
-            "&units=imperial&appid=" + APIKeyWeather;
+          "&units=imperial&appid=" + APIKeyWeather;
 
         $.ajax({
-            url: queryURLWeather,
-            method: "GET"
+          url: queryURLWeather,
+          method: "GET"
         })
 
-            .then(function (weatherData) {
+          .then(function (weatherData) {
 
-                console.log("City: " + weatherData.name);
-                console.log("Temp: " + weatherData.main.temp);
-                console.log("Weather: " + weatherData.weather[0].main);
+            console.log("City: " + weatherData.name);
+            console.log("Temp: " + weatherData.main.temp);
+            console.log("Weather: " + weatherData.weather[0].main);
 
 
-                let City =  weatherData.name;
-                let Temp = weatherData.main.temp;
-                let Weather = weatherData.weather[0].main;
-                
-                
-                    let url = "https://api.unsplash.com/search/photos/?client_id=b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614&query="
-                     number = Math.floor(Math.random() * 10);
-                    
-                        $.ajax({
-                            url: url+Weather,
-                            method: "GET"
-                        }).then(function(response){
-                            weatherPic = response.results[number].urls.regular
-                            console.log(response.results[number].urls.regular)
-                        })
-            });
-    });
-})
-    </script>
-    <script src="./assets/javascript/goodMorningArray.js"></script>
+            let City = weatherData.name;
+            let Temp = weatherData.main.temp;
+            let Weather = weatherData.weather[0].main;
+
+
+            let url = "https://api.unsplash.com/search/photos/?client_id=b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614&query="
+            number = Math.floor(Math.random() * 10);
+
+            $.ajax({
+              url: url + Weather,
+              method: "GET"
+            }).then(function (response) {
+              weatherPic = response.results[number].urls.regular
+              console.log(response.results[number].urls.regular)
+
+              $("#content").css({"background-image":`url(${weatherPic})`});
+            })
+          });
+      });
+    })
+  </script>
+  <script src="./assets/javascript/goodMorningArray.js"></script>
+  <script src="./assets/javascript/background.js"></script>
+  <script src="./quoteAPI.js"></script>
 </body>
-<footer>
-    Copyright @ Orange-Team-Project-1 2019
-</footer>
+
 </html>
