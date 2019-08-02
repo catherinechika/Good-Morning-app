@@ -79,12 +79,17 @@ var greetings = [
   ];   
   
   
-  $(".title").text(greetings[Math.floor(Math.random() * greetings.length)].greeting)
-  
+  $(".display-4").text(greetings[Math.floor(Math.random() * greetings.length)].greeting)
+  $(".lead").text("Today is _________")
   
   var fontArray = ["'Single Day', cursive", "'Tangerine', cursive", "'Love Ya Like A Sister', cursive", "'Fredericka the Great', cursive","'Marcellus SC', serif","'Mountains of Christmas', cursive","'Rye', cursive","'Sacramento', cursive","'Monoton', cursive","'Playball', cursive","'Italianno', cursive","'Rancho', cursive","'Cinzel Decorative', cursive","'Emilys Candy', cursive","'Londrina Shadow', cursive","'Jacques Francois Shadow', cursive"],
       selectFont = fontArray[Math.floor(Math.random() * fontArray.length)];
   var fontColor = ["#F082B5", "#0DA9FF","#FF620D","black","#0B1380"];
       selectColor = fontColor[Math.floor(Math.random() * fontColor.length)];
-  $(".title").css('font-family', selectFont)
-  $(".title").css('color', selectColor)
+  $(".display-4").css('font-family', selectFont)
+  $(".display-4, .lead").css('color', selectColor)
+  $(".display-4, .lead").css('background', "white")
+  $(".display-4").css('border-radius', "30px")
+  $(".display-4").css('padding', "8px")
+
+  
