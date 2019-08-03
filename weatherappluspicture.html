@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+</head>
+
+<body>
+    <!---->
+    <div class="container has-text-centered">
+        <form id="zipcode-form">
+            <label for="zipcode-input">Enter Your ZipCode:</label>
+            <input type="text" id="zipcode-input">
+            <br>
+            <br>
+            <label for="countrycode-input">Enter Your Country Code:</label>
+            <input type="text" id="countrycode-input">
+            <br>
+            <br>
+            <input id="find-zipcode" type="submit" value="Zipcode Weather">
+        </form>
+        <div id="divone">
+        </div>
+        <div id="divtwo">
+        </div>
+        <div id="divthree">
+        </div>
+        <div id="divpicture">
+            <img id="weather_pic" src="" />
+        </div>
+    </div>
+
+
+    <!----------------------->
+    <!----------------------->
+    <!----------------------->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            const APIKeyIP = "f822e5c9d81b944cb089e61702e644de";
+            const queryURLIP = "http://api.ipstack.com/check?access_key=" + APIKeyIP;
+            $.ajax({
+                url: queryURLIP,
+                method: "GET"
+            })
+                .then(function (ipData) {
+                    console.log(String(ipData.latitude));
+                    console.log(String(ipData.longitude));
+                    localStorage.setItem("latitude", String(ipData.latitude));
+                    localStorage.setItem("longitude", String(ipData.longitude));
+                    let latitude = localStorage.getItem("latitude");
+                    let longitude = localStorage.getItem("longitude");
+
+                    //API REQUEST FOR WEATHER DATA USING IP
+                    const APIKeyWeather = "42f33f5100f9cc8bb325c710a41147ec";
+                    const queryURLWeather = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude +
+                        "&units=imperial&appid=" + APIKeyWeather;
+                    $.ajax({
+                        url: queryURLWeather,
+                        method: "GET"
+                    })
+                        .then(function (weatherData) {
+                            console.log("City: " + weatherData.name);
+                            console.log("Temp: " + weatherData.main.temp);
+                            console.log("Weather: " + weatherData.weather[0].main);
+                            let City = weatherData.name;
+                            let Temp = weatherData.main.temp;
+                            let Weather = weatherData.weather[0].main;
+
+
+                            let APIKeyUnsplash = "b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614";
+                            let queryURLUnsplash = "https://api.unsplash.com/search/photos/?client_id=" + APIKeyUnsplash + "&query="
+                            number = Math.floor(Math.random() * 10);
+                            $.ajax({
+                                url: queryURLUnsplash + Weather,
+                                method: "GET"
+                            })
+                                .then(function (unsplashPicture) {
+                                    console.log(unsplashPicture.results[number].urls.regular)
+
+                                    let weatherPicture = unsplashPicture.results[number].urls.regular;
+
+                                    $("#weather_pic").attr("src", weatherPicture);
+                                })
+                        });
+                });
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
