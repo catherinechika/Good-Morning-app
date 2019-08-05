@@ -1,99 +1,78 @@
 var greetings = [
     {
-      lang: "Chinese",
-      greeting: "早上好 (Zǎoshang hǎo)",
+      greeting: "Chinese:  早上好 (Zǎoshang hǎo)",
     },
     { 
-    lang: "Spanish",
-    greeting: "Buenos dias",
+    greeting: "Spanish:  Buenos dias",
     },
     {
-     lang: "English",
-      greeting: "Good Morning"
+      greeting: "English:  Good Morning"
     },
     {
-      lang: "Hindi",
-      greeting: "शुभ प्रभात(shubh prabhaat)"
+      greeting: "Hindi:  शुभ प्रभात(shubh prabhaat)"
     },
     {
-      lang: "Arabic",
-      greeting: "صباح الخير(sabah al - khair)"
+      greeting: "Arabic" + "صباح الخير(sabah al - khair)"
     },
     {
-      lang: "Portuguese",
-      greeting:"Bom Dia"
+      greeting:"Portuguese:  Bom Dia"
     },
     {
-      lang: "Bengali",
-      greeting:"সুপ্রভাত(Suprabhāta)"
+      greeting:"Bengali:  সুপ্রভাত(Suprabhāta)"
     },
     {
-      lang: "Russian",
-      greeting: "Доброе утро(Dobroye utro)"
+      greeting: "Russian:  Доброе утро(Dobroye utro)"
     },
     {
-      lang: "Japanese",
-      greeting: "おはようございます(Ohayōgozaimasu)"
+      greeting: "Japanese:  おはようございます(Ohayōgozaimasu)"
     },
     {
-      lang: "Dutch",
-      greeting: "Goedemorgen"
+      greeting: "Dutch:  Goedemorgen"
     },
     {
-      lang: "Xhosa",
-      greeting: "Molweni ekuseni"
+      greeting: "Xhosa:  Molweni ekuseni"
     },
     {
-      lang: "German",
-      greeting: "Guten Morgen"
+      greeting: "German:  Guten Morgen"
     },
     {
-      lang: "Korean",
-      greeting: "좋은 아침이에요 (joh-eun achim e-ae-yo)"
+      greeting: "Korean:  좋은 아침이에요 (joh-eun achim e-ae-yo)"
     },
     {
-      lang: "French",
-      greeting: "Bonjour"
+      greeting: "French:  Bonjour"
     },
     {
-      lang: "Telugu",
-      greeting: "శుభోదయం (Śubhōdayaṁ)"
+      greeting: "Telugu:  శుభోదయం (Śubhōdayaṁ)"
     },
     {
-      lang: "Turkish",
-      greeting: "Günaydın"
+      greeting: "Turkish:  Günaydın"
     },
     {
-      lang: "Tamil",
-      greeting: "காலை வணக்கம் (Kālai vaṇakkam)"
+      greeting: "Tamil:  காலை வணக்கம் (Kālai vaṇakkam)"
     },
     {
-      lang: "Vietnamese",
-      greeting: "Chào buổi sáng"
+      greeting: "Vietnamese:  Chào buổi sáng"
     },
     {
-      lang: "Polish",
-      greeting: "Dzień dobry"
+      greeting: "Polish:  Dzień dobry"
     },
   
   ];   
   
-  
-  $(".display-4").text(greetings[Math.floor(Math.random() * greetings.length)].greeting)
+
+  $(".display-4").append(greetings[Math.floor(Math.random() * greetings.length)].greeting)
   
   
   var fontArray = ["'Single Day', cursive", "'Tangerine', cursive", "'Love Ya Like A Sister', cursive", "'Fredericka the Great', cursive","'Marcellus SC', serif","'Mountains of Christmas', cursive","'Rye', cursive","'Sacramento', cursive","'Monoton', cursive","'Playball', cursive","'Italianno', cursive","'Rancho', cursive","'Cinzel Decorative', cursive","'Emilys Candy', cursive","'Londrina Shadow', cursive","'Jacques Francois Shadow', cursive"],
       selectFont = fontArray[Math.floor(Math.random() * fontArray.length)];
   var fontColor = ["#F082B5", "#0DA9FF","#FF620D","black","#0B1380"];
       selectColor = fontColor[Math.floor(Math.random() * fontColor.length)];
-  $(".display-4, .lead").css('font-family', selectFont)
-  $(".display-4, .lead").css('color', selectColor)
-  $(".display-4, .lead").hide().fadeIn(3000)
-  $(".display-4, .lead").css('background', "rgba(255, 255, 255, 0.7)")
-  //$(".display-4").css('box-shadow', "inset 3px 3px 8px black")
-  //$(".lead").css('box-shadow', "inset 3px 3px 8px black")
-  $(".display-4").css('text-shadow', "4px 4px 6px gray")
-  $(".display-4").css('border-radius', "30px")
+
+  $(".display-4, .date").css('font-family', selectFont)
+  $(".display-4, .date").css('color', selectColor)
+  $(".display-4, .date").hide().fadeIn(3000)
+  //$(".display-4").css('box-shadow', "inset 10px 10px 20px 20px white")
+  $(".display-4, .date").css('text-shadow', "4px 4px 6px white")
+  $(".display-4, .date").css('border-radius', "30px"
   $(".display-4").css('padding', "8px")
 
-  
