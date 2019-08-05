@@ -89,7 +89,7 @@ var greetings = [
   $(".display-4, .lead").css('font-family', selectFont)
   $(".display-4, .lead").css('color', selectColor)
   $(".display-4, .lead").hide().fadeIn(3000)
-  $(".display-4, .lead").css('background', "white")
+  $(".display-4, .lead").css('background', "rgba(255, 255, 255, 0.7)")
   //$(".display-4").css('box-shadow', "inset 3px 3px 8px black")
   //$(".lead").css('box-shadow', "inset 3px 3px 8px black")
   $(".display-4").css('text-shadow', "4px 4px 6px gray")
