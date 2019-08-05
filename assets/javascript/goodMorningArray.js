@@ -72,7 +72,7 @@ var greetings = [
   $(".display-4").css('color', selectColor)
   $(".display-4").hide().fadeIn(3000)
   //$(".display-4").css('box-shadow', "inset 10px 10px 20px 20px white")
-  $(".display-4").css('text-shadow', "4px 4px 6px white")
+  $(".display-4").css('text-shadow', "4px 4px 6px black")
   $(".display-4").css('border-radius', "30px")
   $(".display-4").css('padding', "8px")
 
