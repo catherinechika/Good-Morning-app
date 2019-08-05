@@ -35,11 +35,22 @@ $(document).ready(function () {
           let Temp = weatherData.main.temp;
           let Weather = weatherData.weather[0].main;
 
-          let url = "https://api.unsplash.com/search/photos/?client_id=b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614&query="
+          const weatherToKeyword = {
+              Clear: "sunny"
+          };
+
+          console.log(weatherToKeyword[Weather]);
+          const imageQuery = weatherToKeyword[Weather] || Weather;
+
+          $(".city").text(City);
+          $(".temperature").text(Temp + " Degrees");
+          $(".condition").text(Weather);
+
+          let url = "https://api.unsplash.com/search/photos/?client_id=b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614&query=";
           number = Math.floor(Math.random() * 10);
 
           $.ajax({
-            url: url + Weather,
+            url: url + imageQuery,
             method: "GET"
           }).then(function (response) {
             weatherPic = response.results[number].urls.regular

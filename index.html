@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Good Morning app</title>
+    <title>Good Morning App</title>
 
     <!--CSS-->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!--Google Fonts CSS-->
     <link
-        href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Emilys+Candy|Fredericka+the+Great|Italianno|Jacques+Francois+Shadow|Londrina+Shadow|Love+Ya+Like+A+Sister|Marcellus+SC|Monoton|Mountains+of+Christmas|Playball|Rancho|Rye|Sacramento|Single+Day|Tangerine&display=swap"
+        href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Emilys+Candy|Fredericka+the+Great|Italianno|Jacques+Francois+Shadow|Londrina+Shadow|Love+Ya+Like+A+Sister|Marcellus+SC|Monoton|Mountains+of+Christmas|Playball|Rancho|Rye|Sacramento|Abel|Acme|Single+Day|Tangerine&display=swap"
         rel="stylesheet">
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -23,30 +24,45 @@
 </head>
 
 <body>
-    <header>
-    </header>
-
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar zipcode">
+            <form class="zipcode-form">
+                <label for="zipcode-input">ZipCode:</label>
+                <input type="text" id="zipcode-input">
+                <input id="find-zipcode" type="submit" value="Search">
+            </form>
+        </div>
+    </nav>
     <main>
-            <div class="conatainer">
-                <h1 class="display-4"></h1>
-                <div class="date">
-                        <p>Today is <span id = "day"></span>
-                            <span id = "month"></span>
-                            <span id ="dayOfMonth"></span>
-                        </p>
-                    </div>
+        <br>
+        <div class="conatainer">
+            <h1 class="display-4"></h1>
+            <div class="date">
+                <p>Today is <span id="day"></span>
+                    <span id="month"></span>
+                    <span id="dayOfMonth"></span>
+                </p>
+            </div>
+            <div class="weather">
+                <h1 class="city"></h1>
+                <h1 class="temperature"></h1>
+                <h1 class="condition"></h1>
+            </div>
+        </div>
+        <div class="timer">
         </div>
         <div class="header" id="htmldiv">QOD: </div>
         </div>
 
     </main>
 
-    <footer>
+    <footer id="sticky">
         Copyright @ Orange-Team-Project-1 2019
     </footer>
 
     <script src="./assets/javascript/goodMorningArray.js"></script>
     <script src="./assets/javascript/background.js"></script>
+    <script src="./assets/javascript/zipcode.js"></script>
     <script src="./assets/javascript/quoteAPI.js"></script>
 </body>
 

@@ -67,11 +67,12 @@ var greetings = [
       selectFont = fontArray[Math.floor(Math.random() * fontArray.length)];
   var fontColor = ["#F082B5", "#0DA9FF","#FF620D","black","#0B1380"];
       selectColor = fontColor[Math.floor(Math.random() * fontColor.length)];
+
   $(".display-4, .date").css('font-family', selectFont)
   $(".display-4, .date").css('color', selectColor)
   $(".display-4, .date").hide().fadeIn(3000)
   //$(".display-4").css('box-shadow', "inset 10px 10px 20px 20px white")
   $(".display-4, .date").css('text-shadow', "4px 4px 6px white")
-  $(".display-4, .date").css('border-radius', "30px")
+  $(".display-4, .date").css('border-radius', "30px"
   $(".display-4").css('padding', "8px")
 
