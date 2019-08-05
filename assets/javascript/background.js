@@ -38,8 +38,7 @@ $(document).ready(function () {
           const weatherToKeyword = {
               Clear: "sunny"
           };
-
-          console.log(weatherToKeyword[Weather]);
+          
           const imageQuery = weatherToKeyword[Weather] || Weather;
 
           $(".city").text(City);

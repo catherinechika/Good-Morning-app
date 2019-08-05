@@ -28,13 +28,14 @@ body{
     margin: 0 10px;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.7);
+    font-size: 50px;
 }
 
 .date{
     margin: 30px 10px;
     border-radius: 30px;
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
     color: black;
     font-size: x-large;
     font-weight: bold;
@@ -44,7 +45,7 @@ body{
     margin: 30px 10px;
     border-radius: 30px;
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
     color: black;
     font-size: xx-large;
 }
@@ -53,16 +54,18 @@ body{
     margin: 30px 10px;
     border-radius: 30px;
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
     color: black;
     font-size: x-large;
+    margin-bottom: 100px;
 }
 
 footer{
-    margin: 30px 10px;
+    width: 100%;
+    margin:0 auto;
     border-radius: 30px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
     color: black;
 }
 
@@ -71,7 +74,6 @@ footer{
 }
 
 #sticky{
-    width:100%;
     font-weight:bold;
     text-align:center;
     position:fixed;
