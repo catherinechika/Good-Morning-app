@@ -19,7 +19,7 @@ $("#find-zipcode").on("click", function (event) {
             console.log("Weather: " + weatherData.weather[0].main);
 
             const city = weatherData.name;
-            const temp = weatherData.main.temp;
+            const temp = (Math.floor(weatherData.main.temp));
             let weather = weatherData.weather[0].main;
 
             const weatherToKeyword = {
