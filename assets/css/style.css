@@ -2,8 +2,8 @@
 body{
     color: rgb(253, 252, 252);
     font-style: italic;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-align: center;
@@ -58,18 +58,17 @@ body{
     color: black;
     font-size: x-large;
     font-weight: bold;
+    margin-bottom: 100px;
 }
 
 .timer{
     background-color: rgba(255, 255, 255, 0.89);
     color: black;
     font-size: 40px;
-
     font-weight: bold;
     margin: 30px 10px;
     border-radius: 30px;
     padding: 5px;
-    margin-bottom: 100px;
     height: 75%;
 }
 
@@ -87,16 +86,13 @@ footer{
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     color: black;
+    position: relative;
+    bottom: 0;
+    font-weight:bold;
+    text-align:center;
 }
 
 .navbar,.display-4,.date,.weather,.header,footer{
     font-family: 'Abel', sans-serif;
-}
-
-#sticky{
-    font-weight:bold;
-    text-align:center;
-    position:fixed;
-    bottom:0; 
 }
 
