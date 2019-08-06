@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <br>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-start">
             <div class="date">
@@ -45,10 +46,34 @@
         <br>
         <div class="container">
             <h1 class="display-4"></h1>
-            <div class="weather">
-                <h1 class="city"></h1>
-                <h1 class="temperature"></h1>
-                <h1 class="condition"></h1>
+
+            <div class="columns">
+                <div class="column">
+                    <div class="weather">
+                        <h1 class="city"></h1>
+                        <h1 class="temperature"></h1>
+                        <h1 class="condition"></h1>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="timer">
+                        <h1 class="time"> <span class="min"> 00<span class="colon">:</span> </span> <span
+                                class="sec">00</span>
+                        </h1>
+                        <select class="meditationTime">
+                            <option value=0>Select Meditaion time</option>
+                            <option value=3600>60 Minutes</option>
+                            <option value=3000>50 Minutes</option>
+                            <option value=2400>40 Minutes</option>
+                            <option value=1800>30 Minutes</option>
+                            <option value=1200>20 Minutes</option>
+                            <option value=900>15 Minutes</option>
+                            <option value=600>10 Minutes</option>
+                            <option value=120>5 Minutes</option>
+                        </select>
+                        <button class="start">Start Meditation</button>
+                    </div>
+                </div>
             </div>
             <div class="header" id="htmldiv">QOD: </div>
         </div>
@@ -62,6 +87,7 @@
     <script src="./assets/javascript/background.js"></script>
     <script src="./assets/javascript/zipcode.js"></script>
     <script src="./assets/javascript/quoteAPI.js"></script>
+    <script src="assets/javascript/timer.js"></script>
 </body>
 
 </html>
