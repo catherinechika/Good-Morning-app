@@ -58,7 +58,26 @@ body{
     color: black;
     font-size: x-large;
     font-weight: bold;
+}
+
+.timer{
+    background-color: rgba(255, 255, 255, 0.89);
+    color: black;
+    font-size: 40px;
+
+    font-weight: bold;
+    margin: 30px 10px;
+    border-radius: 30px;
+    padding: 5px;
     margin-bottom: 100px;
+    height: 75%;
+}
+
+button, select{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 30px;
 }
 
 footer{
