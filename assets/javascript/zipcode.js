@@ -29,7 +29,7 @@ $("#find-zipcode").on("click", function (event) {
             const imageQuery = weatherToKeyword[weather] || weather;
 
             $(".city").text(city);
-            $(".temperature").text(temp + " Degrees");
+            $(".temperature").text(temp + "°F");
             $(".condition").text(weather);
 
             let url = "https://api.unsplash.com/search/photos/?client_id=b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614&query="
