@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 
           let City = weatherData.name;
-          let Temp = weatherData.main.temp;
+          let Temp = (Math.floor(weatherData.main.temp));
           let Weather = weatherData.weather[0].main;
 
           const weatherToKeyword = {
@@ -42,7 +42,7 @@ $(document).ready(function () {
           const imageQuery = weatherToKeyword[Weather] || Weather;
 
           $(".city").text(City);
-          $(".temperature").text(Temp + " Degrees");
+          $(".temperature").text(Temp + "°F");
           $(".condition").text(Weather);
 
           let url = "https://api.unsplash.com/search/photos/?client_id=b3bd4562dd7cfd4ec3ff312c310ef726835e54ae3cf6f7fc8f9b9c8f914eb614&query=";
