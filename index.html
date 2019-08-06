@@ -23,31 +23,34 @@
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar zipcode">
-            <form class="zipcode-form">
-                <label for="zipcode-input">ZipCode:</label>
-                <input type="text" id="zipcode-input">
-                <input id="find-zipcode" type="submit" value="Search">
-            </form>
-        </div>
-    </nav>
-    <main>
-        <br>
-        <div class="container">
-            <h1 class="display-4"></h1>
+        <div class="navbar-start">
             <div class="date">
                 <p>Today is <span id="day"></span>
                     <span id="month"></span>
                     <span id="dayOfMonth"></span>
                 </p>
             </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar zipcode">
+                <form class="zipcode-form">
+                    <label for="zipcode-input">ZipCode:</label>
+                    <input type="text" id="zipcode-input">
+                    <input id="find-zipcode" type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <br>
+        <div class="container">
+            <h1 class="display-4"></h1>
             <div class="weather">
                 <h1 class="city"></h1>
                 <h1 class="temperature"></h1>
                 <h1 class="condition"></h1>
             </div>
             <div class="header" id="htmldiv">QOD: </div>
-        </div>
         </div>
     </main>
 
