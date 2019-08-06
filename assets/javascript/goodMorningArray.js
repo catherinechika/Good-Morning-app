@@ -1,9 +1,9 @@
 var greetings = [
     {
-      greeting: "Chinese:  早上好 (Zǎoshang hǎo)",
+      greeting: "Chinese:  早上好 (Zǎoshang hǎo)"
     },
     { 
-    greeting: "Spanish:  Buenos dias",
+    greeting: "Spanish:  Buenos dias"
     },
     {
       greeting: "English:  Good Morning"
@@ -12,7 +12,7 @@ var greetings = [
       greeting: "Hindi:  शुभ प्रभात(shubh prabhaat)"
     },
     {
-      greeting: "Arabic" + "صباح الخير(sabah al - khair)"
+      greeting: "Arabic: " + "صباح الخير <br>(sabah al - khair)"
     },
     {
       greeting:"Portuguese:  Bom Dia"
@@ -21,7 +21,7 @@ var greetings = [
       greeting:"Bengali:  সুপ্রভাত(Suprabhāta)"
     },
     {
-      greeting: "Russian:  Доброе утро(Dobroye utro)"
+      greeting: "Russian:  Доброе утро <br>(Dobroye utro)"
     },
     {
       greeting: "Japanese:  おはようございます(Ohayōgozaimasu)"
@@ -36,7 +36,7 @@ var greetings = [
       greeting: "German:  Guten Morgen"
     },
     {
-      greeting: "Korean:  좋은 아침이에요 (joh-eun achim e-ae-yo)"
+      greeting: "Korean:  좋은 아침이에요 <br>(Joh-Eun Achim E-Ae-Yo)"
     },
     {
       greeting: "French:  Bonjour"
@@ -48,7 +48,7 @@ var greetings = [
       greeting: "Turkish:  Günaydın"
     },
     {
-      greeting: "Tamil:  காலை வணக்கம் (Kālai vaṇakkam)"
+      greeting: "Tamil:  காலை வணக்கம் <br>(Kālai vaṇakkam)"
     },
     {
       greeting: "Vietnamese:  Chào buổi sáng"
@@ -71,8 +71,9 @@ var greetings = [
   $(".display-4").css('font-family', selectFont)
   $(".display-4").css('color', selectColor)
   $(".display-4").hide().fadeIn(3000)
-  //$(".display-4").css('box-shadow', "inset 10px 10px 20px 20px white")
+  $(".display-4").css('box-shadow', "inset 7px 7px 10px 10px white")
   $(".display-4").css('text-shadow', "4px 4px 6px black")
   $(".display-4").css('border-radius', "30px")
   $(".display-4").css('padding', "8px")
+  $(".display-4").css('font-size', "70px")
 
