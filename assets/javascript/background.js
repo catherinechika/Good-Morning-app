@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $.ajax({
-      url: "http://api.ipstack.com/check?access_key=f822e5c9d81b944cb089e61702e644de",
+      url: "https://api.ipstack.com/check?access_key=f822e5c9d81b944cb089e61702e644de",
       method: "GET"
     }).then(function (ipData) {
 
