@@ -1,15 +1,8 @@
 $(document).ready(function () {
 
-    $.ajax({
-      url: "http://api.ipstack.com/check?access_key=f822e5c9d81b944cb089e61702e644de",
-      method: "GET"
-    }).then(function (ipData) {
-
-      console.log(String(ipData.latitude));
-      console.log(String(ipData.longitude));
-
-      localStorage.setItem("latitude", String(ipData.latitude));
-      localStorage.setItem("longitude", String(ipData.longitude));
+      navigator.geolocation.getCurrentPosition(function(position) {
+      localStorage.setItem("latitude", String(position.coords.latitude));
+      localStorage.setItem("longitude", String(position.coords.longitude));
       let latitude = localStorage.getItem("latitude");
       let longitude = localStorage.getItem("longitude");
 
